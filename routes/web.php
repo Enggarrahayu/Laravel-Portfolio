@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('orders', OrderController::class)->only('index','store','create');
+
+Route::get('/deliveries/create/{order_id}', [DeliveryController::class, 'create'])->name('deliveries.create');
+Route::resource('deliveries', DeliveryController::class)->only('store');

@@ -44,7 +44,7 @@
                     <td>{{$order->status}}</td>
                     <td>                      
                       @if($order->status == 'pending')
-                      <a class="btn btn-info btn-sm" href="">
+                      <a class="btn btn-info btn-sm" href="{{route('deliveries.create', $order->id)}}" target="_blank">
                         <i class="">Create Delivery</i>
                       </a>
                       @endif
