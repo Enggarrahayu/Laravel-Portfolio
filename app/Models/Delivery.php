@@ -19,9 +19,10 @@ class Delivery extends BaseModel
 
     public function order()
     {
-        return $this->belongsTo(Order::class, 'delivery_id', 'id');
+        return $this->belongsTo(Order::class, 'delivery_id', 'id')->withDefault([
+            'name' => '-',
+        ]);
     }
-
     public function getTotalCostAttribute()
     {
         // Ensure the order and delivery route exist

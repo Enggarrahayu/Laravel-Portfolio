@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class DeliveryController extends Controller
 {
+    public function index()
+    {
+        $deliveries = Delivery::all();
+        return view('deliveries.index', compact('deliveries'));
+    }
     public function create($order_id)
     {
         $order = Order::findOrFail($order_id);
@@ -35,7 +40,6 @@ class DeliveryController extends Controller
         $delivery->vehicle = $request->vehicle;
         $delivery->delivery_route_id = $request->delivery_route_id;
         $delivery->status = 'in_progress';
-        $delivery->total_cost = $delivery->getTotalCostAttribute();
 
         $delivery->save();
 

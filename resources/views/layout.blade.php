@@ -61,15 +61,11 @@
           </div>
         </div>
         <div class="navbar-nav w-100">
-          <a href="" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Orders</a>
-          {{-- <a href="{{route('employees.index')}}" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Employee</a>
-          <a href="{{route('positions.index')}}" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Position</a> --}}
+          <a href="{{route('orders.index')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Orders</a>
+          <a href="{{route('deliveries.index')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Deliveries</a>
         </div>
 
-        {{-- <div class="navbar-nav w-100">
-          <a href="{{route('payrolls.index', )}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Payroll</a>
-          <a href="{{route('attendances.index')}}" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Attendance</a>
-        </div> --}}
+       
       </nav>
     </div>
     <!-- Sidebar End -->
