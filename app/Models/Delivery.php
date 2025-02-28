@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Delivery extends Model
+class Delivery extends BaseModel
 {
     use HasFactory;
     protected $guarded = [];
@@ -17,8 +17,8 @@ class Delivery extends Model
         ]);
     }
 
-    public function orders()
+    public function order()
     {
-        return $this->hasMany(Order::class);
+        return $this->belongsTo(Order::class, 'delivery_id', 'id');
     }
 }
