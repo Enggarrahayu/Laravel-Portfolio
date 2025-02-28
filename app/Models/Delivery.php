@@ -10,7 +10,8 @@ class Delivery extends BaseModel
     use HasFactory;
     protected $guarded = [];
 
-    public function route()
+
+    public function deliveryRoute()
     {
         return $this->belongsTo(DeliveryRoute::class)->withDefault([
             'name' => '-'
@@ -19,16 +20,12 @@ class Delivery extends BaseModel
 
     public function order()
     {
-        return $this->belongsTo(Order::class, 'delivery_id', 'id')->withDefault([
+        return $this->belongsTo(Order::class, 'order_id', 'id')->withDefault([
             'name' => '-',
         ]);
     }
     public function getTotalCostAttribute()
     {
-        // Ensure the order and delivery route exist
-        if (!$this->order || !$this->deliveryRoute) {
-            return 0; // Return 0 if data is incomplete
-        }
 
         // Extract values for readability
         $weight = $this->order->weight;

@@ -12,6 +12,6 @@ class Order extends BaseModel
 
     public function delivery()
     {
-        return $this->hasOne(Delivery::class, 'id', 'delivery_id');
+        return $this->hasOne(Delivery::class, 'order_id', 'id');
     }
 }

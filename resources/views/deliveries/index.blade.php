@@ -32,7 +32,7 @@
                     <td>{{ $delivery->driver_name }}</td>
                     <td>{{ $delivery->vehicle }}</td>
                     <td>Rp{{ number_format($delivery->total_cost, 2) }}</td>
-                    <td>{{$delivery->order->status}}</td>
+                    <td>{{$delivery->status}}</td>
                     <td>
                      
                     </td>
