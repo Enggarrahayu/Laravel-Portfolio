@@ -44,6 +44,6 @@ class DeliveryController extends Controller
         $delivery->save();
 
         session()->flash('success', 'Delivery created successfully.');
-        return redirect()->route('orders.index');
+        return redirect()->route('deliveries.index');
     }
 }

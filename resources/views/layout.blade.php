@@ -63,6 +63,7 @@
         <div class="navbar-nav w-100">
           <a href="{{route('orders.index')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Orders</a>
           <a href="{{route('deliveries.index')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Deliveries</a>
+          <a href="{{route('check-match.index')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Check String</a>
         </div>
 
        
