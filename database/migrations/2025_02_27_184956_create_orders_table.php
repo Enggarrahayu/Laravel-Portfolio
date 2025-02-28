@@ -13,14 +13,12 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->uuid('delivery_id');
             $table->string('name', 100);
-            $table->decimal('weight', 10,2);
-            $table->decimal('volume', 10,2);
+            $table->decimal('weight', 10, 2);
+            $table->decimal('volume', 10, 2);
+            $table->enum('status', ['pending', 'in_progress', 'completed'])->default('pending');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('delivery_id')->references('id')->on('deliveries')->onDelete('cascade');
         });
     }
 
