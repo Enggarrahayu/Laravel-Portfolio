@@ -18,7 +18,7 @@
   <div class="table-responsive">
     <table class="table text-start align-middle table-hover mb-0 my-table">
       <thead>
-            <tr>
+          <tr>
                 <th>No</th>
                 <th>Name</th>
                 <th>Volume Base Price</th>

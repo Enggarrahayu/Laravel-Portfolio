@@ -25,6 +25,7 @@
   <link href="{{asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
   <link href="{{asset('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.0/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Customized Bootstrap Stylesheet -->
   <link href="{{asset('template/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -97,11 +98,11 @@
                 {{-- <span class="d-none d-lg-inline-flex">{{ Auth::user()->name }}</span> --}}
               </a>
               <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                {{-- <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Log Out</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                   @csrf
-                </form> --}}
+                </form>
               </div>
             </div>
           </div>
