@@ -61,9 +61,17 @@
           </div>
         </div>
         <div class="navbar-nav w-100">
-          <a href="{{route('orders.index')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Orders</a>
-          <a href="{{route('deliveries.index')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Deliveries</a>
-          <a href="{{route('check-match.index')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Check String</a>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+               Master Data
+            </a>
+            <div class="dropdown-menu bg-transparent border-0">
+                <a href="{{route('delivery_routes.index')}}" class="dropdown-item"> <i class="fa fa-route me-2"></i>Routes</a>
+            </div>
+        </div>
+          <a href="{{route('orders.index')}}" class="nav-item nav-link"><i class="fa fa-box me-2"></i>Orders</a>
+          <a href="{{route('deliveries.index')}}" class="nav-item nav-link"><i class="fa fa-truck me-2"></i>Deliveries</a>
+          <a href="{{route('check-match.index')}}" class="nav-item nav-link"><i class="fa fa-font me-2"></i>Check String</a>
         </div>
 
        

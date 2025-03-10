@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DeliveryController;
+use App\Http\Controllers\DeliveryRouteController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StringMatchController;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,7 @@ Route::resource('orders', OrderController::class)->only('index', 'store', 'creat
 
 Route::get('/deliveries/create/{order_id}', [DeliveryController::class, 'create'])->name('deliveries.create');
 Route::resource('deliveries', DeliveryController::class)->only('store', 'index');
+Route::resource('delivery_routes', DeliveryRouteController::class);
 
 Route::get('/check-match', [StringMatchController::class, 'index'])->name('check-match.index');
-Route::post('/check-match', [StringMatchController::class, 'check-match']);
+Route::post('/check-match', [StringMatchController::class, 'checkMatch'])->name('check-match');

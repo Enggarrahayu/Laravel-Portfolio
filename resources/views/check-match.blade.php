@@ -38,11 +38,11 @@
             </form>
 
             @if (isset($match_percentage))
-                <div class="mt-4 p-3 bg-light border rounded">
+                <div class="mt-4 p-3 bg-light border rounded " style="color: white">
                     <h5>Result:</h5>
                     <p><strong>Input 1:</strong> {{ $input1 }}</p>
                     <p><strong>Input 2:</strong> {{ $input2 }}</p>
-                    <p style="color: white"><strong>Match Percentage:</strong> {{ $match_percentage }}%</p>
+                    <p><strong>Match Percentage:</strong> {{ $match_percentage }}%</p>
                 </div>
             @endif
         </div>
