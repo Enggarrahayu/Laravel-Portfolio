@@ -95,7 +95,7 @@
           <div class="nav-item dropdown">
             <div class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                {{-- <span class="d-none d-lg-inline-flex">{{ Auth::user()->name }}</span> --}}
+                <span class="d-none d-lg-inline-flex">{{ Auth::user()->name }}</span>
               </a>
               <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
